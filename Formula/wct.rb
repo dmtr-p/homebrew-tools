@@ -4,6 +4,8 @@ class Wct < Formula
   version "1.2.0"
   license "MIT"
 
+  depends_on "tmux"
+
   on_macos do
     on_arm do
       url "https://github.com/dmtr-p/wct/releases/download/v1.2.0/wct-darwin-arm64"
@@ -27,8 +29,6 @@ class Wct < Formula
       sha256 "5ce15cab807a48dcbe555d5d391dc6ab836e6d78d107290ba878d1ea320b664e"
     end
   end
-
-  depends_on "tmux"
 
   def install
     binary = Dir["wct-*"].first || "wct"
