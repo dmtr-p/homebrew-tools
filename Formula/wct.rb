@@ -32,14 +32,9 @@ class Wct < Formula
 
   def install
     binary = Dir["wct-*"].first || "wct"
-
-    # Generate completions before bin.install (avoids exec permission issues in cellar)
-    chmod 0755, binary
-    (bash_completion/"wct").write `./#{binary} completions bash`
-    (zsh_completion/"_wct").write `./#{binary} completions zsh`
-    (fish_completion/"wct.fish").write `./#{binary} completions fish`
-
     bin.install binary => "wct"
+
+    generate_completions_from_executable(bin/"wct", "completions")
   end
 
   test do
