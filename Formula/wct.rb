@@ -1,48 +1,48 @@
 class Wct < Formula
   desc "Git worktree workflow automation CLI"
   homepage "https://github.com/dmtr-p/wct"
-  version "1.4.1"
+  version "1.5.0"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     on_arm do
-      url "https://github.com/dmtr-p/wct/releases/download/v1.4.1/wct-darwin-arm64"
-      sha256 "1b08b4590bf970dd108e59b30ce7577b7ebf53cf3fb678e9c62f57d76780302c"
+      url "https://github.com/dmtr-p/wct/releases/download/v1.5.0/wct-darwin-arm64"
+      sha256 "89eb61ed401ec3bd0905f7d773f37cb149855839b457ca6b873dceae9f462312"
     end
 
     on_intel do
-      url "https://github.com/dmtr-p/wct/releases/download/v1.4.1/wct-darwin-x64"
-      sha256 "2e21b69936b07b7f15329c87eae62bb9478da7467f516b5b6a2b878d132d0a1e"
+      url "https://github.com/dmtr-p/wct/releases/download/v1.5.0/wct-darwin-x64"
+      sha256 "f215fc91b6930d8daa327ed150c41908a95b6da43ae3b5d776e6d6f31f15535c"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/dmtr-p/wct/releases/download/v1.4.1/wct-linux-arm64"
-      sha256 "d74532ffa64f62c6a5a71d349410d76401eb804eddb5924dd615e66c5d67c1e1"
+      url "https://github.com/dmtr-p/wct/releases/download/v1.5.0/wct-linux-arm64"
+      sha256 "8f2ea71f70c2a1f419c2d010dc92e98f4d8d17db7dae25364032739255cdb997"
     end
 
     on_intel do
-      url "https://github.com/dmtr-p/wct/releases/download/v1.4.1/wct-linux-x64"
-      sha256 "55f8a5fe416567f1ad199cdd2b20de530da7e738785fce710e95f761744c94f4"
+      url "https://github.com/dmtr-p/wct/releases/download/v1.5.0/wct-linux-x64"
+      sha256 "2708d4529c04735d3aac32805aed557fe9d08cce2d556ab26869c7b725b9b48c"
     end
   end
 
   resource "bash-completion" do
-    url "https://github.com/dmtr-p/wct/releases/download/v1.4.1/wct.bash"
-    sha256 "27d49585316adb27a33cc1e06b87751f02bd6a2ca3b0fd02e6bf144b7409d281"
+    url "https://github.com/dmtr-p/wct/releases/download/v1.5.0/wct.bash"
+    sha256 "5be1ba8e48256d5876671c867d01e8c1fcfacbc23ebf2e1d4782e1363335437c"
   end
 
   resource "zsh-completion" do
-    url "https://github.com/dmtr-p/wct/releases/download/v1.4.1/_wct"
-    sha256 "b1a2adf59aa6cc86326fae1d0777225d716174b4a40a6e0b660f916de0097b86"
+    url "https://github.com/dmtr-p/wct/releases/download/v1.5.0/_wct"
+    sha256 "b95d0eda4968b05c737b120c580664fc56aac1a32c5d102ca47570798e125c74"
   end
 
   resource "fish-completion" do
-    url "https://github.com/dmtr-p/wct/releases/download/v1.4.1/wct.fish"
-    sha256 "9195a2872c7efb21fed742c6dca48915f60f1f523b3a5b597eb82ae9e7708697"
+    url "https://github.com/dmtr-p/wct/releases/download/v1.5.0/wct.fish"
+    sha256 "fe01b335289238bfc2cf54d8c499d0d26528390928d850e2088c845c76d5dd4d"
   end
 
   def install
